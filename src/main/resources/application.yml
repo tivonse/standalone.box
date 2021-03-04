@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: standalone.box
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/stdb"
+    username: stuser
+    password: password
+
+logging:
+  level:
+    org:
+      springframework:
+        cache: TRACE # uplifted the logging level to TRACE level
+server:
+  port: 8081
